@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Panda Project</title>
+</head>
+<body>
+  <div id="app" class="enviroment day-mode">
+    <header>
+      <a href="index.html" class="logo"><img class="logo-icon" src="images/logo_panda_project.svg" alt="logo"></a>
+      <h1>Panda Project</h1>
+    </header>
+    <section class="tree-container">
+      <img class="bamboo" src="images/bamboo.svg" alt="bamboo_tree">
+    </section>
+    <section id="drop" class="panda-container">
+        <img src="images/panda.svg">
+    </section>
+    <div class="control-panel">
+      <section class="weather">
+        <div class="day">
+          <img class="sun" src="images/sun.svg" alt="day_mode">
+        </div>
+        <div class="night">
+          <img class="moon" src="images/moon.svg" alt="night_mode">
+        </div>
+        <div class="rain">
+          <img class="rain-icon" src="images/rain.svg" alt="rain_mode">
+        </div>
+      </section>
+      <scetion class="feed-panda">
+        <ul>
+          <li class="stick-container" ><img class="stick" src="images/bamboo-stick.svg"></li>
+          <li class="stick-container"><img class="stick" src="images/bamboo-stick.svg"></li>
+          <li class="stick-container"><img class="stick" src="images/bamboo-stick.svg"></li>
+          <li class="stick-container"><img class="stick" src="images/bamboo-stick.svg"></li>
+          <li class="stick-container"><img class="stick" src="images/bamboo-stick.svg"></li>
+          <li class="stick-container"><img class="stick" src="images/bamboo-stick.svg"></li>
+          <li class="stick-container visible"><img class="stick" src="images/bamboo-stick.svg"></li>
+          <li class="stick-container visible"><img class="stick" src="images/bamboo-stick.svg"></li>
+        </ul>
+      </section>
+    </div>
+    <div class="scroll">
+      <a href="#facts" class="icon"><</a>
+    </div>
+
+  </div>
+  <section id="facts" class="facts">
+    <h2>Facts!</h2>
+    <p class="fact-content">The word “panda” may have developed from the Nepalese word poonya, which means “bamboo-eating animal” or “plant-eating animal.”</p>
+    <button class="fact-button">Random fact</button>
+    <div class="scroll-up">
+      <a href="#app" class="icon-up"><</a>
+    </div>
+    <footer class="footer-day-mode">
+      <span> &copy 2016 </span> <a target="_blank" href="https://github.com/Szona"> Alicja Ćmiel</a>
+    </footer>
+  </section>
+  <script src="js/jquery-3.1.1.min%20(1).js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

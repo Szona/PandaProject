@@ -1,0 +1,328 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico');
+/*reset*/
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+    overflow: hidden;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: lighter;
+}
+/*header*/
+.enviroment {
+  height: 100vh;
+}
+.day-mode {
+  background-color: background: rgba(164, 224, 252, 1);
+  background: -moz-linear-gradient(top, rgba(164, 224, 252, 1) 0%, rgba(98, 173, 83, 0.73) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(164, 224, 252, 1)), color-stop(100%, rgba(98, 173, 83, 0.73)));
+  background: -webkit-linear-gradient(top, rgba(164, 224, 252, 1) 0%, rgba(98, 173, 83, 0.73) 100%);
+  background: -o-linear-gradient(top, rgba(164, 224, 252, 1) 0%, rgba(98, 173, 83, 0.73) 100%);
+  background: -ms-linear-gradient(top, rgba(164, 224, 252, 1) 0%, rgba(98, 173, 83, 0.73) 100%);
+  background: linear-gradient(to bottom, rgba(164, 224, 252, 1) 0%, rgba(98, 173, 83, 0.73) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#a4e0fc', endColorstr='#62ad53', GradientType=0);
+}
+.night-mode {
+  background-color: background: rgba(6, 6, 74, 1);
+  background: -moz-linear-gradient(top, rgba(6, 6, 74, 1) 0%, rgba(37, 41, 54, 1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(6, 6, 74, 1)), color-stop(100%, rgba(37, 41, 54, 1)));
+  background: -webkit-linear-gradient(top, rgba(6, 6, 74, 1) 0%, rgba(37, 41, 54, 1) 100%);
+  background: -o-linear-gradient(top, rgba(6, 6, 74, 1) 0%, rgba(37, 41, 54, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(6, 6, 74, 1) 0%, rgba(37, 41, 54, 1) 100%);
+  background: linear-gradient(to bottom, rgba(6, 6, 74, 1) 0%, rgba(37, 41, 54, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#06064a', endColorstr='#252936', GradientType=0);
+}
+header {
+  margin-left: 7%;
+  padding: 20px;
+  display: flex;
+  z-index: 5;
+}
+.logo {
+  display: block;
+  width: 18vmin;
+  margin-top: 10px;
+  z-index: 5;
+  animation: shake 2s ease-in-out;
+}
+.logo:hover {
+  animation: shake 2s infinite ease-in-out;
+}
+.logo-icon {
+  width: 100%;
+}
+@keyframes shake {
+  0% {transform: rotate(0deg);}
+  33% {transform: rotate(-10deg);}
+  66% {transform: rotate(10deg);}
+  100% {transform: rotate(0deg);}
+}
+h1 {
+  text-align: center;
+  font-family: Pacifico;
+  font-weight: lighter;
+  font-size: 10vmin;
+  margin: 10px 0 0 50px;
+  text-decoration: none;
+  text-shadow: 2px 2px 8px #fff;
+  z-index: 5;
+}
+/*bamboo tree*/
+.tree-container {
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 100vmin;
+  z-index: 3;
+
+}
+.bamboo {
+  position: relative;
+  width: 100%;
+  z-index: 4;
+}
+/*panda*/
+.panda-container {
+  position: absolute;
+  top:30%;
+  right: 10%;
+  width: 65vmin;
+  z-index: 1;
+}
+.panda {
+  width: 100%;
+  z-index: 2;
+}
+/*control*/
+.control-panel {
+  width: 80vmin;
+  position: absolute;
+  top: 35%;
+  left: 7%;
+  display: flex;
+}
+/*weather*/
+.weather {
+width: 20vmin;
+}
+.day,
+.night,
+.rain {
+  width: 15vmin;
+  cursor: pointer;
+  border-radius: 10%;
+  background-color: rgba(255, 255, 255, 0.34);
+  margin: 5px;
+}
+.day:hover,
+.night:hover,
+.rain:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.day:active,
+.night:active,
+.rain:active {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.sun,
+.moon,
+.rain-icon
+ {
+  width: 100%;
+}
+.drop {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(13, 52, 58, 1)), to(rgba(255, 255, 255, 0.6)));
+    background: -moz-linear-gradient(top, rgba(13, 52, 58, 1) 0%, rgba(255, 255, 255, .6) 100%);
+    width: 1px;
+    height: 89px;
+    position: absolute;
+    animation: fall .63s linear infinite;
+    display: block;
+}
+@keyframes fall {
+    to { margin-top: 900px;}
+}
+/*feed */
+.feed-panda ul{
+  width: 60vmin;
+  height: 50vmin;
+  border-radius: 3%;
+  background-color: rgba(255, 255, 255, 0.34);
+  display: flex;
+  flex-wrap: wrap;
+}
+.stick-container {
+  display: inline-block;
+  list-style: none;
+  width: 14vmin;
+  cursor: move;
+  z-index: 6;
+}
+.stick {
+  width: 100%;
+}
+/*scroll*/
+.scroll {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  text-decoration: none;
+  transform: rotate(-90deg);
+  animation: scroll 2.5s infinite ease-in-out;
+}
+@keyframes scroll {
+  0% {bottom: 3%;}
+  50% {bottom: 0%;}
+  100% {bottom: 3%;}
+}
+.icon {
+  text-decoration: none;
+  font-size: 6vmin;
+  font-family: Pacifico;
+  color: #fff;
+}
+/*facts*/
+.facts {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+h2 {
+  margin-top: 1.5em;
+  font-size: 2em;
+}
+.fact-content {
+  width: 70%;
+  height: 300px;
+  font-size: 1.3em;
+  line-height: 2em;
+  text-align: center;
+}
+.fact-button {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid rgb(98, 173, 83);
+  width: 50vmin;
+  font-size: 1em;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: bold;
+  border-radius: 8px;
+  /*box-shadow: 1px 1px 8px lightgray;*/
+  background-color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.fact-button:focus {
+  outline: 0;
+}
+/*scroll up*/
+.scroll-up {
+  position: absolute;
+  top: 175%;
+  right: 7%;
+  text-decoration: none;
+  transform: rotate(90deg);
+  animation: scrollup 2.5s infinite ease-in-out;
+}
+@keyframes scrollup {
+  0% {top: 178%;}
+  50% {top: 175%;}
+  100% {top: 178%;}
+}
+.icon-up {
+  text-decoration: none;
+  font-size: 3em;
+  font-family: Pacifico;
+  color: rgb(98, 173, 83);
+}
+/*footer*/
+footer {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-size: 0.9em;
+}
+.footer-day-mode {
+    background-color: rgba(98, 173, 83, 0.70);
+}
+.footer-night-mode {
+    background-color: #252936;
+}
+footer a {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 5px;
+}
+
+footer a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+/*media queries*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+  .enviroment {
+
+  }
+  h1 {
+    font-size: 8vmin;
+    margin: 10px 0 0 20px;
+  }
+  .tree-container {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100vmin;
+    z-index: 1;
+
+  }
+  .bamboo {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+  }
+  /*panda*/
+  .panda-container {
+    position: absolute;
+    top:30%;
+    right: 0;
+    width: 60vmin;
+    z-index: 3;
+  }
+  .panda {
+    width: 100%;
+    z-index: 4;
+  }
+  .control-panel {
+    position: relative;
+    top: 20%;
+  }
+  .weather {
+    display: flex;
+    position: absolute;
+    top: -50%;
+    width: 80vmin;
+    z-index: 6;
+  }
+  .feed-panda ul{
+    width: 53vmin;
+    height: 50vmin;
+  }
+  .stick-container {
+    margin: 0 5px;
+    width: 14vmin;
+  }
+  .visible {
+    display: none;
+  }
+  .fact-content {
+    font-size: 1em;
+    height: 280px;
+  }
+}
